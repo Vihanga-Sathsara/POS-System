@@ -275,20 +275,22 @@
     margin-top: 5px;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
     #container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 20px;
+        width: 90%;
     }
     
-    .payment_table {
-        width: 100%;
-        grid-column: span 2;
-        overflow-x: auto;
+    #itemDetails{
+        height: 0%;
     }
-
-    #paymentTable {
-        min-width: 900px;
+    .payment_table {
+        width: 80%;
+        grid-column: span 2;
+    }
+    #customerDetails{
+        height: 0%;
     }
     
     #addItem {
@@ -300,12 +302,32 @@
         height: auto;
         min-height: 300px;
     }
+
+    #paymentDetails {
+        width: 92%;
+        padding: 0 3%;
+      }
+    
+      #secondDiv,#thirdDiv {
+        grid-template-rows: 0.9fr 1fr 0.9fr 1fr;
+        gap: 12px;
+      }
+    
+      #paymentDetails input {
+        width: 88%;
+      }
+    
+      #btn_purchase {
+        width: 8vw;
+        min-width: 110px;
+      }
 }
 
 @media screen and (max-width: 1024px) {
     #container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        width: 90%;
     }
     
     .payment_table {
@@ -313,13 +335,20 @@
         grid-column: span 2;
         overflow-x: auto;
     }
+    .c_address {
+        width: 150%;
+    }
 
+    #itemDetails{
+        height: 0%;
+    }
+    
     #customerDetails{
-        height: 20%;
+        height: 0%;
     }
     
     #paymentTable {
-        min-width: 900px;
+        width: 80%;
     }
     
     #addItem {
@@ -331,23 +360,103 @@
         height: auto;
         min-height: 300px;
     }
+
+    #paymentDetails {
+        width: 92%; 
+        padding: 0 2%; 
+      }
+    
+      #secondDiv,#thirdDiv {
+        grid-template-rows: 0.8fr 1fr 0.8fr 1fr; 
+        gap: 12px;
+      }
+    
+      #paymentDetails input {
+        width: 90%; 
+      }
+    
+      #btn_purchase {
+        width: 7vw; 
+        min-width: 100px; 
+      }
+
+      
 }
 
 @media screen and (max-width: 768px) {
     #container {
-        grid-template-columns: 1fr;
-        width: 98%;
-        padding: 15px;
+        grid-template-columns: (1, 1fr);
+        gap: 5px;
+        width: 90%;
     }
     
     .invoiceForm {
         margin-bottom: 20px;
     }
-    
-    #customerDetails {
-        grid-template-columns: 1fr;
+    #itemDetails{
+        height: 0%;
     }
     
+    #customerDetails {
+        height: 0%;
+    }
+    #customerDetails label{
+        height: 20px;
+        font-size: 10px;
+    }
+
+    #itemDetails label{
+        height: 20px;
+        width: 80%;
+        font-size: 10px;
+    }
+
+    #itemDetails select{
+        height: 20px;
+        width: 80%;
+        font-size: 8px;
+    }
+
+    #itemDetails button{
+        height: 20px;
+        font-size: 10px;
+    }
+
+    #itemDetails input{
+        height: 20px;
+        width: 80%;
+    }
+
+    #orderId{
+        height: 20px; 
+    }
+
+    #customerDetails input{
+        height: 20px;
+        font-size: 8px;
+        width: 70%;
+    }
+
+    #customerDetails label{
+        width: 70%;
+    }
+
+    #customerDetails select{
+        width: 70%;
+    }
+
+    #customerDetails select{
+        height: 20px;
+        font-size: 8px;
+    }
+
+    #customerDetails {
+        height: 0%;
+    }
+
+    #itemDetails{
+        height: 0%;
+    }
     .c_address {
         width: 100%;
     }
@@ -364,13 +473,55 @@
     #paymentDetails input {
         width: 100%;
     }
+
+    #paymentDetails {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    #firstDiv {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #secondDiv {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #secondDiv label {
+        margin-top: 10px;
+    }
+    
+    #paymentDetails input {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+    
+    #thirdDiv {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    #btn_purchase {
+        width: 100% !important;
+        margin-top: 10px;
+    }
+    
+    .payment_table {
+        overflow-x: auto;
+    }
 }
 
 @media screen and (max-width: 480px) {
     #container {
         padding: 10px;
         margin-left: 0;
-        width: 100%;
+        gap: 5px;
+        width: 80%;
     }
     
     .formName span {
@@ -407,7 +558,6 @@
     }
 }
 
-/* Very small devices (phones, 360px and down) */
 @media screen and (max-width: 360px) {
     .formName span {
         font-size: 1rem;
