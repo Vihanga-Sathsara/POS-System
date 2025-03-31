@@ -1,0 +1,190 @@
+/* Your existing CSS (unchanged) */
+body {
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;   
+    background-color: rgb(0, 106, 255);
+    color: white;
+    align-items: center;
+    width: 100%;
+}
+
+header nav ul {
+    margin-right: 1%;
+}
+
+header nav ul li {
+    list-style: none;
+    display: inline;
+}
+
+header nav ul li button {
+    background-color: rgb(255, 255, 255);
+    width: 80px;
+    height: 40px;
+    margin-left: -5px;
+    border-color: bisque;
+}
+
+header nav ul li button a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+#headerLabel {
+    font-size: 2rem;
+    margin-left: 1%;
+}
+
+.content-section {
+    display: none; 
+}
+
+.content-section.active-section {
+    display: block;
+}
+
+#homepage {
+    position: relative;
+    width: 100%;
+}
+
+#analytics {
+    position: relative;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    background-color: rgb(236, 240, 240);
+    border-radius: 10px;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+.details {
+    position: relative;
+    height: 20vw;
+    background-color: rgb(255, 255, 255);
+}
+
+.detail {
+    position: relative;
+    height: 15%;
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+    align-content: center;
+}
+
+.detail span {
+    color: white;
+    font-weight: bold;
+    margin: 12px;
+}
+
+.details img {
+    position: relative;
+    top: 15%;
+    left: 5%;
+    height: 30%;
+    width: 30%;
+}
+
+.details label {
+    color: blue;
+    position: relative;
+    left: 50%;
+    top: 40%;
+}
+
+.details button {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    height: 30px;
+    width: 40px;
+    position: relative;
+    left: 50%;
+    top: 40%;
+}
+
+
+@media screen and (max-width: 1024px) {
+    #analytics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .details {
+        height: 25vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #headerLabel {
+        font-size: 1.5rem;
+    }
+    
+    #analytics {
+        grid-template-columns: 1fr;
+        width: 90%;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .details {
+        height: 150px;
+    }
+    
+    .details img {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .details label {
+        left: 40%;
+        top: 35%;
+    }
+    
+    .details button {
+        left: 40%;
+        top: 35%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #headerLabel {
+        font-size: 1.2rem;
+    }
+    
+    .menu-panel {
+        width: 80%;
+    }
+    
+    #analytics {
+        margin-top: 10%;
+        width: 80%;
+    }
+    
+    .detail span {
+        margin: 8px;
+        font-size: 0.9rem;
+    }
+    
+    .details label {
+        font-size: 0.9rem;
+    }
+}

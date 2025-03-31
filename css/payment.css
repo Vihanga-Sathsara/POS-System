@@ -1,0 +1,425 @@
+#payment{
+   position: relative;
+   width: 100%;
+   margin-top: 5%;
+}
+
+#container{
+    position: relative;
+    width: 95%;
+    display:grid;
+    gap: 0% 1%;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    background-color: rgb(236, 240, 240);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 1.25%;
+}
+
+.invoiceForm{
+    position: relative;
+    height: 28vw;
+    justify-items: center;
+    background-color: white;
+}
+
+.formName{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(0, 106, 255);
+    align-content: center;
+}
+
+.formName span{
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    margin-left: 10PX;
+} 
+
+#customerDetails{
+    position: relative;
+    width: 95%;
+    height: 80%;
+    gap: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#customerDetails label{
+    height: 30px;
+}
+
+#customerDetails input{
+    height: 20px;
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+#customerDetails select{
+    height: 32px;
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+#address{
+    width: 100%;
+}
+
+#custID{
+    border: 1px solid gray;
+    height: 30px;
+}
+
+.c_data{
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    height: 80%;
+}
+
+.c_address{
+    width: 211%;
+}
+
+.lables{
+    border: none;
+}
+
+#customer_Id,#customer_Name,#customer_Salary,#customer_address{
+    border: 1px solid gray;
+}
+
+#lbl_orderId,#lbl_date,#lbl_id,#lbl_custID,#lbl_custName,#lbl_custSalary,#lbl_custAddress{
+    align-content: flex-end;
+}
+
+#itemDetails{
+    position: relative;
+    width: 95%;
+    height: 80%;
+    top: 5%;
+    gap: 5%;
+    display: grid;
+}
+
+#itemDetails label{
+    height: 30px;
+}
+
+#itemDetails input{
+    border: 1px solid gray;
+    height: 30px;
+    padding: 5px;
+}
+
+#itemDetails select{
+    border: 1px solid gray;
+    padding: 5px;
+    height: 32px;
+}
+
+.item_detail{
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    height: 65%;
+}
+
+#firstDivision{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5%;
+}
+
+#secondDivision{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3%;
+}
+
+#lbl_code,#lbl_itemCode,#lbl_itemName,#lbl_itemPrice,#lbl_itemQty,#lbl_orderQty{
+    align-content: flex-end;
+}
+
+#show_itemcode,#show_itemName,#show_itemPrice,#show_itemqty,#show_orderQty{
+    border: 1px solid gray;
+}
+
+#addItem{
+    background-color: red;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    width: 20%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 80%;
+}
+
+#paymentDetails{
+    position: relative;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+#firstDiv{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+#secondDiv{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+#thirdDiv{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+#Total_Value{
+    font-size: 2rem;
+    color: rgb(112, 169, 255);
+}
+
+#Sub_Value{
+    font-size: 2rem;
+    color: rgb(237, 79, 40);
+}
+
+#subValue,#totalValue{
+    font-size: 1.3rem;
+    color: black;
+}
+
+#lbl_total{
+    color: rgb(112, 169, 255);
+    font-weight: bold;
+}
+
+#lbl_subTotal{
+    color:rgb(237, 79, 40);
+    font-weight: bold;
+}
+
+#paymentDetails input{
+    width: 13vw;
+    height: 30px;
+}
+
+#btn_purchase{
+    background-color: rgb(3, 181, 3);
+    border: none;
+    height: 35px;
+    width: 6vw;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+#secondDiv label{
+    align-content: flex-end;
+}
+
+.payment_table{
+    width: 290%;
+    margin: 5%;
+}
+
+#paymentTable{
+    width: 100%;
+    border-collapse: collapse ;
+}
+
+#paymentTable th{
+    background-color:  rgb(0, 106, 255);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    text-align: left;
+}
+
+#paymentTable td{
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    text-align: left;
+}
+
+#orderIDError,#orderQtyError{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: red;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1024px) {
+    #container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .payment_table {
+        width: 100%;
+        grid-column: span 2;
+        overflow-x: auto;
+    }
+
+    #paymentTable {
+        min-width: 900px;
+    }
+    
+    #addItem {
+        width: 30%;
+        margin-left: 70%;
+    }
+    
+    .invoiceForm {
+        height: auto;
+        min-height: 300px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .payment_table {
+        width: 100%;
+        grid-column: span 2;
+        overflow-x: auto;
+    }
+
+    #customerDetails{
+        height: 20%;
+    }
+    
+    #paymentTable {
+        min-width: 900px;
+    }
+    
+    #addItem {
+        width: 30%;
+        margin-left: 70%;
+    }
+    
+    .invoiceForm {
+        height: auto;
+        min-height: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #container {
+        grid-template-columns: 1fr;
+        width: 98%;
+        padding: 15px;
+    }
+    
+    .invoiceForm {
+        margin-bottom: 20px;
+    }
+    
+    #customerDetails {
+        grid-template-columns: 1fr;
+    }
+    
+    .c_address {
+        width: 100%;
+    }
+    
+    #addItem {
+        width: 40%;
+        margin-left: 60%;
+    }
+    
+    #btn_purchase {
+        width: 120px;
+    }
+    
+    #paymentDetails input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #container {
+        padding: 10px;
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .formName span {
+        font-size: 1.1rem;
+    }
+    
+    #firstDivision,
+    #secondDivision {
+        grid-template-columns: 1fr;
+    }
+    
+    #addItem {
+        width: 50%;
+        margin-left: 50%;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    #btn_purchase {
+        width: 100%;
+    }
+    
+    #Total_Value, 
+    #Sub_Value {
+        font-size: 1.8rem;
+    }
+    
+    #paymentTable {
+        min-width: 600px;
+    }
+    
+    #paymentDetails input {
+        width: 100%;
+    }
+}
+
+/* Very small devices (phones, 360px and down) */
+@media screen and (max-width: 360px) {
+    .formName span {
+        font-size: 1rem;
+    }
+    
+    #addItem {
+        width: 60%;
+        margin-left: 40%;
+    }
+    
+    #Total_Value,
+    #Sub_Value {
+        font-size: 1.5rem;
+    }
+}

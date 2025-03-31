@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/customerMnagement.css">
+    <link rel="stylesheet" href="/css/itemManagement.css">
+    <link rel="stylesheet" href="/css/payment.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <label id="headerLabel">Dashboard</label>
+            <ul>
+                <li><button class="nav-button"><a href="#homepage">Home</a></button></li>
+                <li><button class="nav-button"><a href="#customerForm">Customer</a></button></li>
+                <li><button class="nav-button"><a href="#itemForm">Item</a></button></li>
+                <li><button class="nav-button"><a href="#payment">Orders</a></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="sections-container">
+        <section id="homepage" class="content-section active-section">
+            <div id="analytics">
+                <div class="details">
+                    <div class="detail customers">
+                        <span>Customers</span>
+                    </div>
+                    <img src="/assets/images/customer.png" alt="">
+                    <label id="customerCount">0</label>
+                </div>
+        
+                <div  class="details">
+                    <div class="detail items">
+                        <span>Items</span>
+                    </div>
+                    <img src="/assets/images/cube.png" alt="">
+                    <label id="itemsCount">0</label>
+                </div>
+        
+                <div  class="details">
+                    <div class="detail orders">
+                        <span>My Orders</span>
+                    </div>
+                    <img src="/assets/images/grocery-store.png" alt="">
+                    <label id="orderCount">0</label>
+                </div>
+        
+                <div  class="details">
+                    <div class="detail setings">
+                        <span>Settings</span>
+                    </div>
+                    <img src="/assets/images/settings-gears.png" alt="">
+                    <button>new</button>
+                </div>
+            </div>  
+        </section>
+
+        <section id="customerForm" class="content-section">
+
+            <form id="customerRegistration">
+                <span id="title">Customer Registration</span>
+                <p>Customer ID</p>
+                <input type="text" id="customerID"/>
+                <span id="custIdError"></span>
+                <p>Customer Name</p>
+                <input type="text" id="customerName"/>
+                <span id="custNameError"></span>
+                <p>Customer Address</p>
+                <input type="text" id="customerAddress"/>
+                <span id="custAddressError"></span>
+                <p>Customer Salary</p>
+                <input type="text" id="customerSalary"/>
+                <span id="custSalaryError"></span>
+
+                    <div id="buttons">
+                        <button id="save">Save Customer</button>
+                        <button id="remove">Remove</button>
+                        <button id="update">Update</button>
+                        <button id="getAll">Get All</button>
+                        <button id="clearAll">Clear All</button>
+                    </div>
+            </form>
+
+            <div class="table-container">
+                <table id="customerTable">
+                    <thead>
+                        <tr>
+                            <th>Customer ID</th>
+                            <th>Customer Name</th>
+                            <th>Customer Address</th>
+                            <th>Customer Salary</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section id="itemForm" class="content-section">
+
+            <form id="itemManagement">
+                <span id="PageName">Item Form</span>
+                <p>Item Code</p>
+                <input type="text" id="itemCode"/>
+                <span id="itemCodeError"></span>
+                <p>Item Name</p>
+                <input type="text" id="itemName"/>
+                <span id="itemNameError"></span>
+                <p>Item Qty</p>
+                <input type="text" id="itemQty"/>
+                <span id="itemQtyError"></span>
+                <p>Unit Price</p>
+                <input type="text" id="itemPrice"/>
+                <span id="itemPriceError"></span>
+
+                <div id="buttons">
+                    <button id="add">Add Item</button>
+                    <button id="removeItem">Remove</button>
+                    <button id="updateItem">Update</button>
+                    <button id="getAllItem">Get All</button>
+                    <button id="clearAllItem">Clear All</button>
+                </div>    
+            </form>
+
+            <div class="table-container">
+                <table id="itemTable">
+                    <thead>
+                        <tr>
+                            <th>Item Code</th>
+                            <th>Item Name</th>
+                            <th>Item Qty</th>
+                            <th>Item Price</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section id="payment" class="content-section">
+
+            <div id="container">
+
+                <div class="invoiceForm">
+                    <div  class="formName">
+                        <span>Invoice Detail</span>
+                    </div>
+                    <form id="customerDetails">
+
+                        <div class="c_data">
+                            <label id="lbl_orderId">Order ID:</label>
+                            <input type="text" id="orderId">
+                            <span id="orderIDError"></span>
+                        </div>
+
+                        <div class="c_data">
+                            <label id="lbl_date">Date:</label>
+                            <input type="date" id="date">
+                        </div>
+
+                        <div class="c_data">
+                            <label id="lbl_id">Customer:</label>
+                            <select name="customer" id="custDropdown"></select>
+                        </div>
+
+                        <div class="c_data">
+                            <label id="lbl_custID">Customer ID:</label>
+                            <label for="" id="customer_Id"></label>
+                        </div>
+
+                        <div class="c_data">
+                            <label id="lbl_custName">Name:</label>
+                            <label for="" id="customer_Name"></label>
+                        </div>
+
+                        <div class="c_data">
+                            <label id="lbl_custSalary">Salary:</label>
+                            <label for="" id="customer_Salary"></label>
+                        </div>
+
+                        <div class="c_data c_address">
+                            <label id="lbl_custAddress" class="lables">Address:</label>
+                            <label for="" id="customer_address"></label>
+                        </div>
+                    </form>
+                </div>
+                <div class="invoiceForm">      
+                    <div  class="formName">
+                        <span>Item Select</span>
+                    </div>
+                    <form id="itemDetails">
+                        <div id="firstDivision">
+                            <div class="item_detail">
+                                <label id="lbl_code">Item:</label>
+                                <select name="item" id="item_Code"></select>
+                            </div>
+                           
+                            <div class="item_detail">
+                                <label id="lbl_itemCode">Item Code:</label>
+                                <label for="" id="show_itemcode"></label>
+                            </div>
+                        </div>
+                      
+                        <div id="secondDivision">
+
+                            <div class="item_detail">
+                                <label id="lbl_itemName">Item Name:</label>
+                                <label for="" id="show_itemName"></label>
+                            </div>
+
+                            <div class="item_detail">
+                                <label id="lbl_itemPrice">Price:</label>
+                                <label for="" id="show_itemPrice"></label>
+                            </div>
+
+                            <div class="item_detail">
+                                <label id="lbl_itemQty">QtyOnHand:</label>
+                                <label for="" id="show_itemqty"></label>
+                            </div>
+
+                        </div>
+                       
+                        <div id="thirdDivision">
+                            <div class="item_detail">
+                                <label id="lbl_orderQty">Order Quantity:</label>
+                                <input type="text" id="show_orderQty">
+                                <span id="orderQtyError"></span>
+                            </div>
+                        </div>
+                        
+                        <button id="addItem">Add Item</button>
+            
+                    </form>
+                </div>
+
+
+                    <form id="paymentDetails">
+                        <div id="firstDiv">
+                            <label id="lbl_total">Total</label>
+                            <span id="Total_Value">00.00<span id="totalValue"> Rs/=</span></span>
+                            <label id="lbl_subTotal">Sub Total</label>
+                            <span id="Sub_Value">00.00<span id="subValue"> Rs/=</span></span>
+                        </div>
+                        <div id="secondDiv">
+                            <label for="">Cash:</label>
+                            <label for="">Discount:</label>
+                            <input type="text" id="cashValue">
+                            <input type="text" id="discountValue">
+                        </div>
+
+
+                        <div id="thirdDiv">
+                            <div class="subDiv">
+                                <label for="">Balance:</label>
+                                <input type="text" id="show_balance" disabled>
+                            </div>
+                           
+                            <div class="subDiv" id="btn">
+                                <button id="btn_purchase">Purchase</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="payment_table">
+                        <table id="paymentTable">
+                            <thead>
+                                <tr>
+                                    <th>Item Code</th>
+                                    <th>Item Name</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    
+                    
+            </div>
+            
+        </section>
+    </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="/controller/navigationController.js"></script>
+   <script src="/controller/customerController.js" type="module"></script>
+   <script src="/controller/itemController.js" type="module"></script>
+   <script src="/controller/orderController.js" type="module"></script>
+</body>
+</html>

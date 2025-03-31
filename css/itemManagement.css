@@ -1,0 +1,109 @@
+#itemForm{
+    position: relative;
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+}
+
+#itemManagement{
+    position: relative;
+    width:40%;
+}
+
+#PageName{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 10px;
+    top: 10px;
+}
+
+#itemManagement p{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#itemManagement input{
+    width: 90%;
+    margin-left: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: -15px;
+    padding: 4px;
+}
+
+#itemManagement button{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+#add{
+    background-color: rgb(103, 103, 238);
+}
+
+#removeItem{
+    background-color: red;
+}
+
+#updateItem{
+    background-color: rgb(194, 194, 74);
+}
+
+#getAllItem{
+    background-color: green;
+}
+
+#clearAllItem{
+    background-color: rgb(241, 37, 37);
+}
+
+#itemCodeError,#itemNameError,#itemQtyError,#itemPriceError{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: red;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    #itemForm {
+        flex-direction: column;
+        margin-top: 5%;
+    }
+    
+    #itemManagement {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    #PageName {
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    #itemManagement p,
+    #itemManagement input,
+    #itemManagement button,
+    #itemCodeError, 
+    #itemNameError, 
+    #itemQtyError, 
+    #itemPriceError {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    #itemManagement input {
+        margin-top: 5px;
+        padding: 8px;
+    }
+    
+    #itemManagement button {
+        margin-top: 15px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,132 @@
+#customerForm{
+    position: relative;
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+}
+
+#customerRegistration{
+    position: relative;
+    width:40%;
+    display: flex;
+    flex-direction: column;
+}
+
+#title{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 10px;
+    top: 10px;
+}
+
+#customerRegistration p{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#customerRegistration input{
+    width: 90%;
+    margin-left: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: -15px;
+    padding: 4px;
+}
+
+#customerRegistration button{
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+#save{
+    background-color: rgb(103, 103, 238);
+}
+
+#remove{
+    background-color: red;
+}
+
+#update{
+    background-color: rgb(194, 194, 74);
+}
+
+#getAll{
+    background-color: green;
+}
+
+#clearAll{
+    background-color: rgb(241, 37, 37);
+}
+
+#custIdError,#custNameError,#custAddressError,#custSalaryError{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: red;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+    #customerRegistration {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #customerForm {
+        flex-direction: column;
+        margin-top: 5%;
+    }
+    
+    #customerRegistration {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    #title {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    #customerRegistration p,
+    #customerRegistration input,
+    #customerRegistration button,
+    #custIdError, 
+    #custNameError, 
+    #custAddressError, 
+    #custSalaryError {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    #customerRegistration button {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #customerRegistration {
+        width: 95%;
+    }
+    
+    #title {
+        font-size: 1.5rem;
+    }
+    
+    #customerRegistration input {
+        padding: 8px;
+        font-size: 1rem;
+    }
+    
+    #customerRegistration button {
+        height: 40px;
+        font-size: 1rem;
+    }
+}
