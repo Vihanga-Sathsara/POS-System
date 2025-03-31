@@ -393,6 +393,7 @@
     .invoiceForm {
         margin-bottom: 20px;
     }
+
     #itemDetails{
         height: 0%;
     }
@@ -519,9 +520,8 @@
 @media screen and (max-width: 480px) {
     #container {
         padding: 10px;
-        margin-left: 0;
         gap: 5px;
-        width: 80%;
+        width: 90%;
     }
     
     .formName span {
@@ -550,15 +550,43 @@
     }
     
     #paymentTable {
-        width: 80%;
+        width: 70%;
     }
     
     #paymentDetails input {
         width: 100%;
+        margin: 2%;
     }
+
+    #itemDetails{
+       height: 0;
+       margin: 2px;
+    }
+
+    #itemDetails input{
+        height: 10px;
+        width: 80%;
+    }
+
+    #itemDetails select{
+        height: 22px;
+        width: 80%;
+        font-size: 10px;
+    }
+
+    #itemDetails input{
+        height: 1vw;
+        width: 80%;
+    }
+
+    #itemDetails label{
+        height: 15px;
+        width: 80%;
+    }
+
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 400px) {
     .formName span {
         font-size: 1rem;
     }
@@ -567,9 +595,20 @@
         width: 60%;
         margin-left: 40%;
     }
+
+    
     
     #Total_Value,
     #Sub_Value {
         font-size: 1.5rem;
+    }
+
+    #paymentTable {
+        width: 10%;
+        margin: 0%;
+    }
+    
+    #payment_table{
+        min-width: 40%;
     }
 }
