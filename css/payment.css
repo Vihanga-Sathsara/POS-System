@@ -512,7 +512,7 @@
     }
     
     .payment_table {
-        overflow-x: auto;
+        width: 80%;
     }
 }
 
@@ -550,7 +550,7 @@
     }
     
     #paymentTable {
-        min-width: 600px;
+        width: 80%;
     }
     
     #paymentDetails input {
